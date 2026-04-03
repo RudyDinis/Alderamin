@@ -4,13 +4,33 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
 import Splash from './component/splash/Splash'
+import Presentation from './component/presentation/Presentation'
 
 function App() {
+	const [showMain, setShowMain] = useState(false);
+
 	return (
 		<>
-			<div class="flex justify-center items-center h-screen">
-				<Splash></Splash>
-			</div>
+			{!showMain && (
+				<div className="flex justify-center items-center h-screen">
+					<Splash onFinish={() => setShowMain(true)} />
+				</div>
+			)}
+
+			{showMain && (
+				<div className="flex justify-center h-screen">
+					<div className='w-[1080px]'>
+						<div className='w-[40%] flex'>
+							<Presentation />
+
+						</div>
+
+						<div className='w-[60%]'>
+
+						</div>
+					</div>
+				</div>
+			)}
 		</>
 	)
 }

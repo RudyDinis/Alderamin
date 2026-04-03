@@ -1,10 +1,10 @@
 import './Splash.css'
 
-function Splash() {
+function Splash({ onFinish }) {
   return (
-    <>
-      <p class="lg:text-7xl text-3xl">ALDERAMIN</p>
-    </>
+    <p className="lg:text-7xl text-3xl splash" onAnimationEnd={onFinish}>
+      Alderamin
+    </p>
   )
 }
 
