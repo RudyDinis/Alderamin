@@ -5,6 +5,7 @@ import heroImg from './assets/hero.png'
 import './App.css'
 import Splash from './component/splash/Splash'
 import Presentation from './component/presentation/Presentation'
+import Activite from './component/activite/Activite'
 
 function App() {
 	const [showMain, setShowMain] = useState(false);
@@ -19,15 +20,15 @@ function App() {
 
 			{showMain && (
 				<div className="flex justify-center h-screen">
-					<div className='w-[1080px]'>
-						<div className='w-[40%] flex'>
+					<div className='w-full md:w-[1080px] flex flex-col md:flex-row'>
+						<div className='w-full md:w-[40%] flex'>
 							<Presentation />
-
 						</div>
 
-						<div className='w-[60%]'>
-
+						<div className='w-full md:w-[60%] flex'>
+							<Activite />
 						</div>
+
 					</div>
 				</div>
 			)}
