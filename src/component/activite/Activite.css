@@ -1,3 +1,86 @@
 .title {
     font-weight: 300;
 }
+
+.project-card {
+    display: flex;
+    gap: 22px;
+    padding: 24px;
+    border: 1px solid #3f3f46;
+    background: linear-gradient(135deg, rgba(39, 39, 42, 0.72), rgba(24, 24, 27, 0.92));
+    transition: border-color 180ms ease, transform 180ms ease, background 180ms ease;
+}
+
+.project-card:hover {
+    border-color: #e28a32;
+    background: linear-gradient(135deg, rgba(55, 39, 27, 0.9), rgba(24, 24, 27, 0.95));
+    transform: translateY(-3px);
+}
+
+.project-card__icon {
+    flex: 0 0 58px;
+    height: 58px;
+    display: grid;
+    place-items: center;
+    color: #f3ae5c;
+    border: 1px solid #70451f;
+    background: #251911;
+}
+
+.project-card__body {
+    flex: 1;
+    min-width: 0;
+}
+
+.project-card__eyebrow,
+.project-card__year,
+.project-tag {
+    color: #a1a1aa;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+}
+
+.project-card__title {
+    margin-top: 6px;
+    color: #f4f4f5;
+    font-family: 'Syne', sans-serif;
+    font-size: 1.65rem;
+    font-weight: 600;
+}
+
+.project-card__description {
+    max-width: 430px;
+    margin-top: 14px;
+    color: #a1a1aa;
+    font-size: 0.9rem;
+    line-height: 1.55;
+}
+
+.project-tag {
+    padding: 5px 9px;
+    border: 1px solid #52525b;
+    letter-spacing: 0;
+}
+
+.project-card__link,
+.project-page__github {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 22px;
+    color: #f3ae5c;
+    font-size: 0.85rem;
+    transition: color 180ms ease, gap 180ms ease;
+}
+
+.project-card__link:hover,
+.project-page__github:hover {
+    color: #ffd29b;
+    gap: 11px;
+}
+
+@media (max-width: 767px) {
+    .project-card {
+        width: 100%;
+    }
+}
